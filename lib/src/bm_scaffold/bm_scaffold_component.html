@@ -1,5 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
-    <a href="#" class="navbar-brand">Bookmark Manager</a>
+ 
+  <a href="#" class="navbar-brand-center">Bookmark Manager</a>
+ 
   </nav>
   <div class="container">
     <div class="row">
@@ -8,8 +10,7 @@
       </div>
       <div
         class="col-md-4 mb-3"
-        *ngFor="let bookmark of bookmarks; let $i = index"
-      >
+        *ngFor="let bookmark of bookmarks; let $i = index">
         <div class="card">
           <div class="card-body" *ngIf="!bookmark.edit">
             <h5 class="card-title">{{ bookmark.title }}</h5>

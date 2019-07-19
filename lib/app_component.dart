@@ -8,6 +8,7 @@ import 'src/bm_scaffold/bm_scaffold_component.dart';
   templateUrl: 'app_component.html',
   directives: [BookmarkScaffoldComponent]
 )
+
 class AppComponent {
   // Nothing here yet. All logic is in TodoListComponent.
 }
