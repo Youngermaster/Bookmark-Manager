@@ -2,6 +2,7 @@ import 'package:angular/angular.dart';
 import 'package:angular_forms/angular_forms.dart';
 
 import '../model/bookmark.dart';
+import '../bm_form/bm_form_component.dart';
 
 @Component(
   selector: 'bm-scaffold',
@@ -34,30 +35,11 @@ class BookmarkScaffoldComponent {
   Bookmark editedBookmark;
 
   addBookmark() {
-    var bm = Bookmark();
-    bookmarks.add(bm);
-    editedBookmark = Bookmark(
-      title: bm.title,
-      description: bm.description,
-      url: bm.url,
-    );
+    bookmarks.add(Bookmark());
   }
 
   editBookmark(int index) {
-    editedBookmark = Bookmark(
-      title: bookmarks[index].title,
-      description: bookmarks[index].description,
-      url: bookmarks[index].url,
-      edit: bookmarks[index].edit,
-    );
     bookmarks[index].edit = true;
-  }
-
-  updateBookmark(int index) {
-    bookmarks[index].title = editedBookmark.title;
-    bookmarks[index].description = editedBookmark.description;
-    bookmarks[index].url = editedBookmark.url;
-    bookmarks[index].edit = false;
   }
 
   removeBookmark(int index) {
